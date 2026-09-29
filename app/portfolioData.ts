@@ -235,23 +235,90 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
 ];
 
-export const AWARDS = [
+export interface AchievementItem {
+  id: string;
+  title: string;
+  organization: string;
+  category: "Brand & Enterprise Deployment" | "Hackathon & Industry Honor" | "Education";
+  metricBadge: string;
+  description: string;
+  iconType: "google" | "kingfisher" | "photobooth" | "gov" | "jsm" | "functionup" | "degree";
+}
+
+export const ACHIEVEMENTS: AchievementItem[] = [
   {
+    id: "google-ai",
+    title: "Google AI Cricket Coach & Vision Engine",
+    organization: "Google & DeepMind (AI Summit 2026)",
+    category: "Brand & Enterprise Deployment",
+    metricBadge: "1,000+ Users in 1 Day",
+    description:
+      "Engineered real-time computer vision batting analysis system recording cricketers in nets with live synthetic voice feedback on shot mechanics for 1,000+ attendees, alongside an interactive AI Photobooth.",
+    iconType: "google",
+  },
+  {
+    id: "kingfisher-ipl",
+    title: "Kingfisher & Heineken Bartender Fantasy",
+    organization: "Kingfisher / Heineken (IPL 2026)",
+    category: "Brand & Enterprise Deployment",
+    metricBadge: "4,000+ Outlets Nationwide",
+    description:
+      "Engineered the fantasy gaming web app deployed in 4,000+ bars and restaurants across Bangalore, Mumbai, Pune, and Delhi during IPL 2026, accompanied by a real-time admin telemetry dashboard.",
+    iconType: "kingfisher",
+  },
+  {
+    id: "brand-photobooths",
+    title: "Live Event Photobooth Engines",
+    organization: "Spotify · Nestlé · Google Summits",
+    category: "Brand & Enterprise Deployment",
+    metricBadge: "High-Throughput Concurrency",
+    description:
+      "Delivered high-concurrency, camera-integrated live event engagement applications for global brand activations and consumer summits.",
+    iconType: "photobooth",
+  },
+  {
+    id: "gov-india",
+    title: "Government of India — Postal Logistics Suite",
+    organization: "Department of Posts, Govt. of India",
+    category: "Brand & Enterprise Deployment",
+    metricBadge: "11 National Web Apps",
+    description:
+      "Architected and shipped 11 specialized production web applications for nationwide parcel management, logistics optimization, and postal operations.",
+    iconType: "gov",
+  },
+  {
+    id: "jsm-award",
     title: "1st Prize, JavaScript Mastery Awards",
     organization: "JSM YouTube (1.2M+ Subscribers)",
-    description: "Awarded top honor for high-performance creative web engineering.",
+    category: "Hackathon & Industry Honor",
+    metricBadge: "1st Place Winner",
+    description:
+      "Awarded top honor for high-performance creative web engineering, silky 60fps animations, and architectural execution.",
+    iconType: "jsm",
   },
   {
+    id: "functionup-award",
     title: "8× Milestone Winner",
-    organization: "FunctionUp across 10 engineering projects",
-    description: "Recognized for consistent speed of delivery, architecture quality, and frontend execution.",
+    organization: "FunctionUp across 10 Engineering Projects",
+    category: "Hackathon & Industry Honor",
+    metricBadge: "8× Consecutive Winner",
+    description:
+      "Recognized for extraordinary velocity, system design, and production delivery across 10 commercial full-stack projects.",
+    iconType: "functionup",
   },
   {
+    id: "degree",
     title: "B.Tech in Computer Science Engineering",
     organization: "Institute of Professional Studies, Indore",
-    description: "Graduated with CGPA 8.9 / 10.0.",
+    category: "Education",
+    metricBadge: "CGPA 8.9 / 10.0",
+    description:
+      "Strong foundation in algorithms, distributed systems, operating systems, and computer architecture.",
+    iconType: "degree",
   },
 ];
+
+export const AWARDS = ACHIEVEMENTS;
 
 export const SKILLS = {
   Languages: ["TypeScript", "JavaScript (ES6+)", "Python", "SQL"],
